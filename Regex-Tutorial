@@ -6,11 +6,11 @@ It is a technique developed in theoretical computer science and formal language 
 
 ## Summary
 
-Trimming White Space--
+Deleting Duplicate Lines From a File--
 
-You can easily trim unnecessary whitespace from the start and the end of a string or the lines in a text file by doing a regex search-and-replace. 
-Search for ^[ \t]+ and replace with nothing to delete leading whitespace (spaces and tabs). 
-Search for [ \t]+$ to trim trailing whitespace. Do both by combining the regular expressions into ^[ \t]+|[ \t]+$. 
+If you have a file in which all lines are sorted, you can easily delete duplicate lines. 
+Simply open the file in your favorite text editor, and do a search-and-replace searching for ^(.*)(\r?\n\1)+$ and replacing with \1.
+
 
 ## Table of Contents
 
@@ -29,47 +29,21 @@ Search for [ \t]+$ to trim trailing whitespace. Do both by combining the regular
 
 -In regex, the anchors have zero width. They are not used for matching characters. Rather they match a position i.e. before, after, or between characters
 
+- in the example the ^ and the $ are start and end anchors
+
 ### Quantifiers
 
 -Indicate numbers of characters or expressions to match
 
-### Grouping Constructs
-
--Match a subexpression that is repeated in the input string.
-
--Apply a quantifier to a subexpression that has multiple regular expression language elements. For more information about quantifiers, see Quantifiers.
-
--Include a subexpression in the string that is returned by the Regex.Replace and Match.Result methods.
-
--Retrieve individual subexpressions from the Match.Groups property and process them separately from the matched text as a whole.
-
-### Bracket Expressions
-
--The main purpose of bracket expressions is that they adapt to the user’s or application’s locale. 
-
--A locale is a collection of rules and settings that describe language and cultural conventions, like sort order, date format, etc. The POSIX standard defines these locales.
+- (.*) -- The dot and star combination simply matches an entire line, whatever its contents, if any.
 
 ### Character Classes
 
--With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters.
+-Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
--Simply place the characters you want to match between square brackets. If you want to match an a or an e, use [ae]. You could use this in gr[ae]y to match either gray or grey. Very useful if you do not know whether the document you are searching through is written in American or British English.
+- \r - 	Matches a carriage return.
 
-### The OR Operator
-
--You can use the | operator (logical OR) to match characters or expression of either the left or right of the | operator. 
-
--For example the (t|T) will match either t or T from the input string.
-
-### Flags
-
--Flags, in a regular expression, are tokens that modify its behavior of searching
-
-### Character Escapes
-
--As we’ve seen, a backslash \ is used to denote character classes, e.g. \d. So it’s a special character in regexps (just like in regular strings).
-
--To use a special character as a regular one, prepend it with a backslash: \..
+- \n - 	Matches a linefeed.
 
 ## Author
 
