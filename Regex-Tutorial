@@ -9,7 +9,7 @@ It is a technique developed in theoretical computer science and formal language 
 Deleting Duplicate Lines From a File--
 
 If you have a file in which all lines are sorted, you can easily delete duplicate lines. 
-Simply open the file in your favorite text editor, and do a search-and-replace searching for ^(.*)(\r?\n\1)+$ and replacing with \1.
+Simply open the file in your favorite text editor, and do a search-and-replace searching for `^(.*)(\r?\n\1)+$` and replacing with \1.
 
 
 ## Table of Contents
