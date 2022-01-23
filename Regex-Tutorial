@@ -1,14 +1,16 @@
 # Regex Tutorial
 
-A regular expression (shortened as regex or regexp;[1] also referred to as rational expression[2][3]) is a sequence of characters that specifies a search pattern in text. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory.
+A regular expression (shortened as regex) is a sequence of characters that specifies a search pattern in text. 
+Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation. 
+It is a technique developed in theoretical computer science and formal language theory.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Trimming White Space--
 
-Grabbing HTML Tags -- <([A-Z][A-Z0-9]*)\b[^>]*>(.*?)</\1>
-
-This will match the opening and closing pair of any HTML tag. Be sure to turn off case sensitivity. The key in this solution is the use of the backreference \1 in the regex. Anything between the tags is captured into the second backreference. This solution will also not match tags nested in themselves.
+You can easily trim unnecessary whitespace from the start and the end of a string or the lines in a text file by doing a regex search-and-replace. 
+Search for ^[ \t]+ and replace with nothing to delete leading whitespace (spaces and tabs). 
+Search for [ \t]+$ to trim trailing whitespace. Do both by combining the regular expressions into ^[ \t]+|[ \t]+$. 
 
 ## Table of Contents
 
