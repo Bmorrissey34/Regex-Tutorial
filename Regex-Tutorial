@@ -25,6 +25,8 @@ This will match the opening and closing pair of any HTML tag. Be sure to turn of
 
 ### Anchors
 
+-In regex, the anchors have zero width. They are not used for matching characters. Rather they match a position i.e. before, after, or between characters
+
 ### Quantifiers
 
 -Indicate numbers of characters or expressions to match
@@ -71,4 +73,4 @@ This will match the opening and closing pair of any HTML tag. Be sure to turn of
 
 Hey my names Brendan and i am currently a student in a coding bootcamp. When completed i plan to persue a job as a full stack developer!
 
-check out my GitHub: github.com/bmorrissey34
+check out my GitHub: http://www.github.com/bmorrissey34
